@@ -15,7 +15,13 @@ def left():
 def forward():
     snake.forward(20)
     anim()
+    body.append(save_coor())
     turtle.ontimer(forward, 300)
+
+
+def save_coor():
+    return (snake.pos())
+
 
 def a():
     return random.randint(-30, 30) * 10
