@@ -2,6 +2,7 @@ import random
 import turtle
 
 snake = turtle.Turtle()
+snake_body = []
 
 
 def right():
@@ -15,7 +16,7 @@ def left():
 def forward():
     snake.forward(20)
     anim()
-    body.append(save_coor())
+    snake_body.append(save_coor())
     turtle.ontimer(forward, 300)
 
 
@@ -52,3 +53,4 @@ turtle.listen()
 turtle.mainloop()
 
 
+print(snake_body)
