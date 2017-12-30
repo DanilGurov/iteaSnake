@@ -20,12 +20,16 @@ def a():
     return random.randint(-300, 300)
 
 # Create apple
-x, y = snake.position()
-snake.up()
-snake.setpos(a(), a())
-snake.dot(15, 'green')
-snake.goto(x, y)
-
+def apple():
+    snake.hideturtle()
+    ap_pos = snake.position()
+    snake.up()
+    snake.setpos(a(), a())
+    snake.dot(15, 'green')
+    snake.goto(ap_pos)
+    snake.showturtle()
+    return ap_pos
+apple = apple()
 snake.up()
 turtle.ontimer(forward, 200)
 turtle.onkey(left, 'a')
