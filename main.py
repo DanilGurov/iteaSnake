@@ -13,19 +13,23 @@ def left():
 
 
 def forward():
-    snake.forward(20)
-    turtle.ontimer(forward, 300)
+    snake.forward(5)
+    turtle.ontimer(forward, 200)
 
 def a():
     return random.randint(-300, 300)
 
 # Create apple
-x, y = snake.position()
-snake.up()
-snake.setpos(a(), a())
-snake.dot(40, 'green')
-snake.goto(x, y)
-
+def apple():
+    snake.hideturtle()
+    ap_pos = snake.position()
+    snake.up()
+    snake.setpos(a(), a())
+    snake.dot(15, 'green')
+    snake.goto(ap_pos)
+    snake.showturtle()
+    return ap_pos
+apple = apple()
 snake.up()
 turtle.ontimer(forward, 200)
 turtle.onkey(left, 'a')
