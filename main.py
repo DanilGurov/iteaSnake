@@ -38,7 +38,7 @@ def apple():
     ap_pos = snake.position()
     snake.up()
     snake.setpos(a(), a())
-    snake.dot(40, 'green')
+    snake.dot(10, 'green')
     snake.goto(ap_pos)
     snake.showturtle()
     return ap_pos
