@@ -2,7 +2,7 @@ import random
 import turtle
 
 snake = turtle.Turtle()
-snake_body = []
+snake_body = [(0, 0)]
 
 
 def right():
@@ -17,6 +17,8 @@ def forward():
     snake.forward(20)
     anim()
     snake_body.append(save_coor())
+    if save_coor() != apple:
+        snake_body.pop(0)
     turtle.ontimer(forward, 300)
 
 
@@ -41,9 +43,7 @@ def apple():
     snake.showturtle()
     return ap_pos
 
-apple_1 = apple()
-apple_2 = apple()
-apple_3 = apple()
+apple = apple()
 
 snake.up()
 turtle.ontimer(forward, 200)
