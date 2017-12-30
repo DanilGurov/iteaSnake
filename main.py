@@ -1,29 +1,32 @@
 import random
 import turtle
 
-move = turtle.Turtle()
+snake = turtle.Turtle()
+
 
 def right():
-    move.right(90)
+    snake.right(90)
+
 
 def left():
-    move.left(90)
+    snake.left(90)
+
 
 def forward():
-    move.forward(10)
+    snake.forward(5)
     turtle.ontimer(forward, 200)
 
 def a():
     return random.randint(-300, 300)
 
 # Create apple
-x, y = t.position()
-t.up()
-t.setpos(a(), a())
-t.dot(10, 'green')
-t.goto(x, y)
+x, y = snake.position()
+snake.up()
+snake.setpos(a(), a())
+snake.dot(15, 'green')
+snake.goto(x, y)
 
-move.up()
+snake.up()
 turtle.ontimer(forward, 200)
 turtle.onkey(left, 'a')
 turtle.onkey(right, 'd')
