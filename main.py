@@ -14,10 +14,14 @@ def left():
 
 def forward():
     snake.forward(20)
+    anim()
     turtle.ontimer(forward, 300)
 
 def a():
     return random.randint(-30, 30) * 10
+
+def anim():
+    snake.dot(20, 'red')
 
 # Create apple
 def apple():
