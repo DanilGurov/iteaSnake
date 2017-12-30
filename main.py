@@ -17,7 +17,7 @@ def forward():
     turtle.ontimer(forward, 200)
 
 def a():
-    return random.randint(-300, 300)
+    return random.randint(-30, 30)*10
 
 # Create apple
 def apple():
@@ -29,7 +29,11 @@ def apple():
     snake.goto(ap_pos)
     snake.showturtle()
     return ap_pos
-apple = apple()
+
+apple_1 = apple()
+apple_2 = apple()
+apple_3 = apple()
+
 snake.up()
 turtle.ontimer(forward, 200)
 turtle.onkey(left, 'a')
