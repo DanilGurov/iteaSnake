@@ -13,8 +13,8 @@ def left():
 
 
 def forward():
-    snake.forward(5)
-    turtle.ontimer(forward, 200)
+    snake.forward(20)
+    turtle.ontimer(forward, 300)
 
 def a():
     return random.randint(-300, 300)
@@ -23,7 +23,7 @@ def a():
 x, y = snake.position()
 snake.up()
 snake.setpos(a(), a())
-snake.dot(15, 'green')
+snake.dot(40, 'green')
 snake.goto(x, y)
 
 snake.up()
